@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif ;
+}
+
+.contenedor{
+  position: relative;
+  min-height: 100vh;
+  background: radial-gradient(#f0483a, #d10a20);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  &-header{
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    &-logo{
+      max-width: 90px;
+    }
+    &-navigation{
+      display: flex;
+      
+      &-enlace{
+        position: relative;
+        text-decoration: none;
+        color: #fff;
+        margin-left: 40px;
+      }
+    }
+  }
+  &-contenido{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-principal{
+      width: 100%;
+      max-width: 600px;
+      h2{
+        color: #fff;
+        font-size:5em; 
+        font-weight: 300;
+        line-height: 1.1em;
+        margin: 20px 0;
+        span{
+          font-weight: 700;
+        }
+      }
+      p{
+        color: #fff;
+        font-size: 1.1em;
+        line-height: 1.5em;
+        margin: 20px 0;
+      }
+      &-action-btn{
+        position: relative;
+        display: inline-block;
+        padding: 20px 50px;
+        background: #fff;
+        color: #333;
+        font-size: 1.1rem;
+        font-weight: 500;
+        border-radius: 40px;
+        text-decoration: none;
+        transition: 0.25s;
+        &:hover{
+          letter-spacing: 2px;
+        }
+      }
+    }
+    &-img{
+      position: relative;
+      img{
+        width: 100%;
+        max-width: 600px;
+        display: block;
+      }
+    }
+  }
+  &-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    padding: 30px 100px;
+    justify-content: space-between;
+    align-items: flex-end;
+    &-sci{
+      display: flex;
+      li{
+        list-style: none;
+        a{
+          color: #fff;
+          font-size: 2em;
+          margin-right: 20px;
+          display: inline-block;
+          transition: 0.25s;
+          :hover{
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px){
+  .contenedor{
+    padding: 20px;
+    &-contenido{
+      &-principal{
+        h2{
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .contenedor-footer{
+    flex-direction: row-reverse;
+    align-items: center;
+    &-sci{
+      margin-top: 40px;
+      margin-right: -80px;
+    }
+  }
+  
+}
